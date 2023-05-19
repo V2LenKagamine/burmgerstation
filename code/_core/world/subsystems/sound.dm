@@ -353,7 +353,7 @@ proc/play_music_track(var/music_track_id,var/client/hearer,var/volume=35,var/loo
 	else if(loop)
 		SSsound.active_sounds[created_sound] = -1
 
-	if(hearers.len == 0)
+	if(hearers == list())
 		log_error("Warning: play_sound was passed a list containing nothing!")
 		return FALSE
 
